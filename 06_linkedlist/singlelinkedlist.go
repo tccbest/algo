@@ -94,12 +94,43 @@ func (this *LinkedList) InsertToTail(v interface{}) bool {
 
 //通过索引查找节点
 func (this *LinkedList) FindByIndex(index uint) *ListNode {
-	return nil
+	if index > this.length {
+		return nil
+	}
+
+	cur := this.head.next
+
+	var i uint = 0
+	for ; i < index; i++ {
+		cur = cur.next
+	}
+
+	return cur
 }
 
 //删除传入的节点
 func (this *LinkedList) DeleteNode(p *ListNode) bool {
-	return false
+	if nil == p {
+		return false
+	}
+
+	cur := this.head.next
+	pre := this.head
+
+	for nil != cur {
+		if cur == p {
+			break
+		}
+
+		pre = cur
+		cur = cur.next
+	}
+
+	pre.next = p.next
+	p = nil
+	this.length--
+
+	return true
 }
 
 //打印链表
