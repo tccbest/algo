@@ -1,6 +1,6 @@
 package _1_sorts
 
-//时间复杂度O(n²)，基于比较，稳定
+//冒泡排序，时间复杂度O(n²)，原地排序，稳定
 func BubbleSort(a []int) {
 	length := len(a)
 	if length <= 1 {
@@ -26,7 +26,7 @@ func BubbleSort(a []int) {
 	}
 }
 
-//时间复杂度O(n²)，基于比较，稳定
+//插入排序，时间复杂度O(n²)，原地排序，稳定
 func InsertionSort(a []int) {
 	length := len(a)
 	if length <= 1 {
@@ -51,7 +51,7 @@ func InsertionSort(a []int) {
 	}
 }
 
-//时间复杂度O(n²)，基于比较，不稳定
+//选择排序，时间复杂度O(n²)，原地排序，不稳定
 func SelectionSort(a []int) {
 	length := len(a)
 	if length <= 1 {
@@ -68,4 +68,9 @@ func SelectionSort(a []int) {
 
 		a[i], a[minIndex] = a[minIndex], a[i]
 	}
+}
+
+//希尔排序，待完善
+func ShellSort(a []int) {
+
 }
