@@ -2,11 +2,20 @@ package _1_sorts
 
 import (
 	"fmt"
+	"math/rand"
 	"testing"
 )
 
+func createRandomArr(length int) []int {
+	arr := make([]int, length, length)
+	for i := 0; i < length; i++ {
+		arr[i] = rand.Intn(100)
+	}
+	return arr
+}
+
 func TestBubbleSort(t *testing.T) {
-	arr := []int{2, 8, 5, 4, 7, 5, 9, 3, 1}
+	arr := createRandomArr(10)
 	fmt.Println("排序前:", arr)
 
 	BubbleSort(arr)
@@ -14,7 +23,7 @@ func TestBubbleSort(t *testing.T) {
 }
 
 func TestInsertionSort(t *testing.T) {
-	arr := []int{2, 8, 5, 4, 7, 5, 9, 3, 1}
+	arr := createRandomArr(10)
 	fmt.Println("排序前:", arr)
 
 	InsertionSort(arr)
@@ -22,7 +31,7 @@ func TestInsertionSort(t *testing.T) {
 }
 
 func TestSelectionSort(t *testing.T) {
-	arr := []int{2, 8, 5, 4, 7, 5, 9, 3, 1}
+	arr := createRandomArr(10)
 	fmt.Println("排序前:", arr)
 
 	SelectionSort(arr)

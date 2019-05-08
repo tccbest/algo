@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func createRandomArr(length int) []int {
+func createRandomArr1(length int) []int {
 	arr := make([]int, length, length)
 	for i := 0; i < length; i++ {
 		arr[i] = rand.Intn(100)
@@ -15,7 +15,7 @@ func createRandomArr(length int) []int {
 }
 
 func TestMergeSort(t *testing.T) {
-	arr := createRandomArr(10)
+	arr := createRandomArr1(10)
 	fmt.Println("排序前:", arr)
 
 	MergeSort(arr)
