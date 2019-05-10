@@ -47,3 +47,47 @@ func TestBinarySearchRecursive(t *testing.T) {
 	resp := BinarySearchRecursive(arr, val)
 	fmt.Println(resp)
 }
+
+func TestBinarySearchFirst(t *testing.T) {
+	arr := []int{2, 3, 10, 10, 10, 23, 56, 30}
+	val := 10
+
+	fmt.Println("数组：", arr)
+	fmt.Println("查找元素：", val)
+
+	resp := BinarySearchFirst(arr, val)
+	fmt.Println(resp)
+}
+
+func TestBinarySearchLast(t *testing.T) {
+	arr := []int{2, 3, 10, 10, 10, 23, 56, 30}
+	val := 10
+
+	fmt.Println("数组：", arr)
+	fmt.Println("查找元素：", val)
+
+	resp := BinarySearchLast(arr, val)
+	fmt.Println(resp)
+}
+
+func TestBinarySearchLastGT(t *testing.T) {
+	arr := []int{2, 3, 10, 10, 10, 23, 56, 80}
+	val := 90
+
+	fmt.Println("数组：", arr)
+	fmt.Println("查找元素：", val)
+
+	resp := BinarySearchLastGT(arr, val)
+	fmt.Println(resp)
+}
+
+func TestBinarySearchLastLT(t *testing.T) {
+	arr := []int{2, 3, 10, 10, 10, 23, 56, 80}
+	val := 22
+
+	fmt.Println("数组：", arr)
+	fmt.Println("查找元素：", val)
+
+	resp := BinarySearchLastLT(arr, val)
+	fmt.Println(resp)
+}
